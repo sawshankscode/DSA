@@ -7,6 +7,7 @@ public class MinDeletionPalindromeString {  //str.length()-lps(longest palindrom
 		
 		String str1="hqghumeaylnlfdxfi";
 		int n=str1.length();
+		
 		for(int i[]:dp)
 		Arrays.fill(i,-1);
 		StringBuilder sb=new StringBuilder(str1);

@@ -7,20 +7,34 @@ public class HandsNumbers {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Scanner sc=new Scanner(System.in);
-		int n=sc.nextInt();
-		int arr[]=new int[10];
-		Arrays.fill(arr,0);
-		int o=n%10;
-		arr=right(arr,o);
-		n=n/10;
-		int t=0;
-		if(n>0) {
-			t=n%10;
-			arr=left(arr,t);
-		}
-		for(int i=0;i<10;i++)
-			System.out.print(arr[i]);
+//		Scanner sc=new Scanner(System.in);
+//		int n=sc.nextInt();
+//		int arr[]=new int[10];
+//		Arrays.fill(arr,0);
+//		int o=n%10;
+//		arr=right(arr,o);
+//		n=n/10;
+//		int t=0;
+//		if(n>0) {
+//			t=n%10;
+//			arr=left(arr,t);
+//		}
+//		for(int i=0;i<10;i++)
+//			System.out.print(arr[i]);
+//		try {
+//			int i,sum; sum=10;
+//			for(i=-1;i<3;++i) {
+//				sum=(sum/i);
+//			//	System.out.println(sum);
+//		}
+//		}
+//		catch(ArithmeticException e) {
+//			System.out.println("0");
+//		}
+		int i=257;
+		byte b;
+		b=(byte)i;
+		System.out.println(b);
 	}
 
 	private static int[] right(int[] arr, int o) {

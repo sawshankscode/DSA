@@ -21,18 +21,25 @@ public class KadaneAlgo {			//SUBARRAY WITH MAX SUM
 		    for(int i=0;i<n;i++){
 		        a[i]=Integer.parseInt( in[i]);
 		    }
-		    int sum =solution(a,n);
-		    System.out.println(sum);
+		    solution(a,n);
+		    
 		}
 	}
-	static int solution(int a[],int n) {
-		int max = a[0];
-		int current_sum = a[0];
-		for(int i = 1; i < n; i++){
-		current_sum = Math.max(a[i], current_sum+a[i]);
-		max = Math.max(max, current_sum);
+	static void solution(int a[],int n) {
+		int s=0,max_so_far=0,max_till_here=0,start=0,end=0;
+		for(int i=0;i<n;i++) {
+			max_till_here+=a[i];
+			if(max_so_far<max_till_here) {
+				max_so_far=max_till_here;
+				start=s;
+				end=i;
+			}
+			if(max_till_here<0) {
+				max_till_here=0;
+				s=i+1;
+			}
 		}
-		return max;
+		System.out.println(max_so_far+" "+start+" "+end);
 		}
 
 }
